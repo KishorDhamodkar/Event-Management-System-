@@ -129,7 +129,7 @@ export default function EventsTable() {
       </tbody>
     </table>
   </div>
-
+  
   {modalOpen && (
     <div className="fixed inset-0 backdrop-blur-sm bg-white/30 flex justify-center items-center z-[100]">
       <div className="bg-white rounded-lg p-6 w-full max-w-sm mx-4 shadow-lg text-center">

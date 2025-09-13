@@ -45,6 +45,7 @@ export default function Navbar() {
             />
           </button>
 
+
           {open && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg overflow-hidden z-50">
               <ul className="text-[#344E41]">
