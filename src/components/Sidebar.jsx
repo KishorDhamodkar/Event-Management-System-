@@ -36,7 +36,7 @@ export default function Sidebar() {
               Campus Events
             </h1>
           )}
-          
+
           <div className="hidden md:block">
             <MdOutlineMenuOpen
               size={28}
@@ -53,6 +53,7 @@ export default function Sidebar() {
             />
           </div>
         </div>
+
         <ul className="mt-5 text-base font-semibold">
           {menuItems.map((item) => (
             <li
@@ -79,8 +80,9 @@ export default function Sidebar() {
           ))}
         </ul>
       </aside>
+
       {!isMobileOpen && (
-        <div className="md:hidden fixed top-4 left-4 z-[80] mt-5">
+        <div className="md:hidden fixed left-4 z-[80] mt-[25px]">
           <IoMdMenu
             size={32}
             className="cursor-pointer text-[#ffffff]"
