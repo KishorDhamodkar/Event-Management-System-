@@ -2,20 +2,28 @@ import { useState } from "react";
 import { MdDashboard, MdUpcoming, MdOutlineMenuOpen } from "react-icons/md";
 import { TiTick } from "react-icons/ti";
 import { IoIosCreate, IoMdMenu } from "react-icons/io";
-import { IoMdClose } from "react-icons/io"; 
+import { IoMdClose } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true); 
-  const [isMobileOpen, setIsMobileOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(true);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
 
   const menuItems = [
     { name: "Dashboard", path: "/", icon: <MdDashboard size={20} /> },
-    { name: "Upcoming Events", path: "/upcoming", icon: <MdUpcoming size={20} /> },
-    { name: "Completed Events", path: "/completed", icon: <TiTick size={20} /> },
+    {
+      name: "Upcoming Events",
+      path: "/upcoming",
+      icon: <MdUpcoming size={20} />,
+    },
+    {
+      name: "Completed Events",
+      path: "/completed",
+      icon: <TiTick size={20} />,
+    },
     { name: "Create Event", path: "/create", icon: <IoIosCreate size={20} /> },
   ];
 
@@ -27,7 +35,9 @@ export default function Sidebar() {
           ${isOpen ? "w-64 px-4" : "w-20 px-2"} 
           py-4 transform transition-all duration-300
           md:relative md:block
-          ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0
+          ${
+            isMobileOpen ? "translate-x-0" : "-translate-x-full"
+          } md:translate-x-0
         `}
       >
         <div className="flex justify-between items-center text-2xl pt-10 pb-10">
@@ -40,7 +50,8 @@ export default function Sidebar() {
           <div className="hidden md:block">
             <MdOutlineMenuOpen
               size={28}
-              className="cursor-pointer ml-5 text-[#588157]"
+              className={`cursor-pointer ml-5 text-[#588157] transform transition-transform duration-300
+    ${isOpen ? "rotate-0" : "rotate-180"}`}
               onClick={() => setIsOpen(!isOpen)}
             />
           </div>
@@ -71,7 +82,7 @@ export default function Sidebar() {
                 className={`flex items-center gap-3 ${
                   !isOpen ? "justify-center" : ""
                 }`}
-                onClick={() => setIsMobileOpen(false)} 
+                onClick={() => setIsMobileOpen(false)}
               >
                 {item.icon}
                 {isOpen && <span>{item.name}</span>}

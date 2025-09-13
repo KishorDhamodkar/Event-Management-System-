@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="relative px-2 py-5 bg-[#344E41] z-50 overflow-hidden">
+   <div className="sticky top-0 px-2 py-5 bg-[#344E41] overflow-hidden z-50">
       <div className="flex justify-between items-center">
         <div className="flex flex-1 justify-start ml-[50px] lg:ml-[5px] lg:justify-start px-1">
           <input

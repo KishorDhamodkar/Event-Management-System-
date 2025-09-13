@@ -47,9 +47,7 @@ export default function EventForm() {
       <div>
         <label className="block mb-1 text-gray-700 font-medium">Event Date</label>
 
-        {/* Buttons: Today, Tomorrow, and next 5 dates */}
         <div className="flex gap-2 mb-2 flex-wrap">
-          {/* First two fixed buttons */}
           <button
             type="button"
             onClick={() => setForm({ ...form, date: today })}
@@ -65,7 +63,6 @@ export default function EventForm() {
             Tomorrow
           </button>
 
-          {/* Next 5 date buttons */}
           {weekDates.map((d) => (
             <button
               key={d}
@@ -78,7 +75,6 @@ export default function EventForm() {
           ))}
         </div>
 
-        {/* Date picker for any other date */}
         <input
           type="date"
           value={form.date}
