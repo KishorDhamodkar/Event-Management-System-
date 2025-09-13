@@ -37,7 +37,7 @@ Follow these steps to run the project locally:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/event-management-dashboard.git
+git clone https://github.com/KishorDhamodkar/Event-Management-System-.git
 cd event-management-dashboard
 ```
 
