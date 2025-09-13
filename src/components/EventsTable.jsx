@@ -84,10 +84,10 @@ export default function EventsTable() {
         </button>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full border-collapse">
+      <div className="overflow-x-auto mb-8">
+        <table className="w-full border-collapse text-xs sm:text-sm md:text-base">
           <thead>
-            <tr className="bg-[#ffffff] text-[#344E41] text-sm sm:text-base">
+            <tr className="bg-[#ffffff] text-[#344E41]">
               <th className="p-2 sm:p-3 text-left">Name</th>
               <th className="p-2 sm:p-3 text-left">Date</th>
               <th className="p-2 sm:p-3 text-left">Organizer</th>
@@ -100,13 +100,13 @@ export default function EventsTable() {
               filteredEvents.map((event) => (
                 <tr
                   key={event.id}
-                  className="border-b border-gray-300 text-white text-sm sm:text-base"
+                  className="border-b border-gray-300 text-white"
                 >
-                  <td className="p-2 sm:p-3">{event.name}</td>
+                  <td className="p-2 sm:p-3 break-words">{event.name}</td>
                   <td className="p-2 sm:p-3">{event.date}</td>
-                  <td className="p-2 sm:p-3">{event.organizer}</td>
+                  <td className="p-2 sm:p-3 break-words">{event.organizer}</td>
                   <td className="p-2 sm:p-3">{event.status}</td>
-                  <td className="p-2 sm:p-3 flex flex-wrap gap-2">
+                  <td className="p-2 sm:p-3 flex flex-col sm:flex-row gap-2">
                     {event.status !== "Completed" && (
                       <button
                         className="bg-[#344E41] text-white px-2 sm:px-3 py-1 rounded hover:bg-[#5aa780] transition"

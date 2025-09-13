@@ -34,14 +34,13 @@ const eventsSlice = createSlice({
       saveEvents(state.events);
     },
     setFilter: (state, action) => {
-      // action.payload can be { status, date }
       state.filter = { ...state.filter, ...action.payload };
     },
     clearFilter: (state) => {
       state.filter = { status: null, date: null };
     },
     setSearch: (state, action) => {
-      state.search = action.payload; // 🔹 store search input
+      state.search = action.payload;
     },
   },
 });

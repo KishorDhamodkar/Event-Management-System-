@@ -20,9 +20,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="relative px-3 py-5 bg-[#344E41] z-50 overflow-hidden">
+    <div className="relative px-2 py-5 bg-[#344E41] z-50 overflow-hidden">
       <div className="flex justify-between items-center">
-        <div className="flex flex-1 justify-start ml-[50px] lg:ml-[5px]} lg:justify-start px-1">
+        <div className="flex flex-1 justify-start ml-[50px] lg:ml-[5px] lg:justify-start px-1">
           <input
             type="text"
             placeholder="Search events..."
