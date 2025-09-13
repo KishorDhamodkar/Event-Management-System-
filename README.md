@@ -1,12 +1,39 @@
-# React + Vite
+# 🎉 Campus Event Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **Event Management System** built with **React, Redux Toolkit, and Tailwind CSS**.  
+This app allows you to create, manage, filter, search, and track events with a clean and modern UI.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [Event Management System on Vercel](https://event-management-system-seven-omega.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features Implemented
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📅 **Create Events** – Add new events with name, date, and organizer  
+- 📋 **View Events** – Display upcoming and completed events in separate sections  
+- ✅ **Mark Completed** – Mark an event as completed  
+- ❌ **Delete Events** – Remove events with confirmation modal  
+- 🔍 **Search** – Find events by name or organizer  
+- 🎯 **Filter** – Filter events by status and date  
+- 💾 **LocalStorage Persistence** – Events are saved in local storage  
+- 📱 **Responsive Design** – Works on desktop, tablet, and mobile  
+- 🎨 **Modern UI** – Styled with Tailwind CSS gradients & transitions  
+- ⚡ **Optimized Build** – Powered by Vite for fast development  
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+Follow these steps to run the project on your local machine.
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/event-management-system.git
+cd event-management-system
+```
+```bash
+npm install
+```
+```bash
+npm run dev
+```
